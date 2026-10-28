@@ -1,0 +1,964 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cafe Parisienne | Breakfast café on Lavender Hill, Battersea SW11</title>
+<meta name="description" content="Family-run café at 225 Lavender Hill, Battersea. Full English and Irish breakfasts, omelettes, paninis, burgers and proper coffee, seven days a week. Rated 4.8 on Google.">
+<!-- TODO: replace with the real domain once deployed -->
+<link rel="canonical" href="https://cafe-parisienne.vercel.app/">
+<meta name="theme-color" content="#1B4F9C">
+<meta name="color-scheme" content="light dark">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cafe Parisienne">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Cafe Parisienne | Proper breakfasts on Lavender Hill">
+<meta property="og:description" content="Family-run café in Battersea. Full English, omelettes, paninis and proper coffee, seven days a week. 4.8 on Google from 1,168 reviews.">
+<meta property="og:url" content="https://cafe-parisienne.vercel.app/">
+<meta property="og:image" content="https://cafe-parisienne.vercel.app/image/4.jpg">
+<meta property="og:image:alt" content="A full English breakfast with eggs, bacon, sausage, grilled tomatoes, beans and toast">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cafe Parisienne | Proper breakfasts on Lavender Hill">
+<meta name="twitter:description" content="Family-run café at 225 Lavender Hill, Battersea SW11. Open seven days.">
+<meta name="twitter:image" content="https://cafe-parisienne.vercel.app/image/4.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231B4F9C'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23F4EEE4'%3EP%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400..700;1,400&family=Marcellus&display=swap">
+<link rel="preload" as="image" href="image/3.jpg" fetchpriority="high">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Cafe Parisienne",
+  "image": "https://cafe-parisienne.vercel.app/image/outerior.jpg",
+  "telephone": "+442079245523",
+  "servesCuisine": ["British", "Breakfast", "Sandwiches", "Pasta"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "225 Lavender Hill",
+    "addressLocality": "London",
+    "postalCode": "SW11 1JR",
+    "addressCountry": "GB"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 51.4643208, "longitude": -0.1620501 },
+  "hasMap": "https://maps.app.goo.gl/f6p3mL1TRf2A9iKS9",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "06:30", "closes": "15:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "07:00", "closes": "15:30" }
+  ],
+  "sameAs": ["https://www.facebook.com/profile.php?id=100055158892146"]
+}
+</script>
+
+<style>
+:root{
+  --bg:#F4EEE4;
+  --surface:#FBF7F0;
+  --ink:#3E2C22;
+  --ink-2:#6A574A;
+  --line:#E0D4C2;
+  --blue:#1B4F9C;
+  --blue-hover:#163F7E;
+  --blue-ink:#1B4F9C;
+  --on-blue:#FFFFFF;
+  --frame:#1E1A17;
+  --mat:#FCFAF6;
+  --footer:#2E2119;
+  --footer-ink:#F1E8DA;
+  --footer-ink-2:#C9B8A5;
+  --shadow:0 1px 2px rgb(62 44 34 / .10), 0 18px 40px -18px rgb(62 44 34 / .45);
+  --ease-out:cubic-bezier(.23,1,.32,1);
+  --ease-in-out:cubic-bezier(.77,0,.175,1);
+  --serif:"Marcellus", "Times New Roman", serif;
+  --sans:"Karla", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --wrap:1200px;
+  --gutter:clamp(16px, 4vw, 40px);
+  --header-h:68px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#1C1511;
+    --surface:#251C17;
+    --ink:#F1E8DA;
+    --ink-2:#BFAF9E;
+    --line:#3B2E26;
+    --blue:#2E64BF;
+    --blue-hover:#3A72D0;
+    --blue-ink:#8DB0EE;
+    --frame:#0E0B09;
+    --mat:#EDE6DA;
+    --footer:#120D0A;
+    --shadow:0 1px 2px rgb(0 0 0 / .4), 0 18px 40px -18px rgb(0 0 0 / .8);
+  }
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 64px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0;text-wrap:pretty}
+ul{margin:0;padding:0;list-style:none}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--blue);color:var(--on-blue);padding:10px 16px;border-radius:999px;text-decoration:none;transition:top .2s var(--ease-out)}
+.skip:focus{top:12px}
+:focus-visible{outline:2px solid var(--blue-ink);outline-offset:3px;border-radius:4px}
+.icon{width:1.15em;height:1.15em;flex:none;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.num{font-variant-numeric:lining-nums tabular-nums}
+
+/* Buttons: pill shape everywhere; surfaces 4px; frames square */
+.btn{--h:48px;display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:var(--h);padding:0 22px;border-radius:999px;font:600 1rem/1 var(--sans);text-decoration:none;white-space:nowrap;cursor:pointer;border:1.5px solid transparent;transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .16s var(--ease-out);-webkit-tap-highlight-color:transparent;user-select:none}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--blue);color:var(--on-blue)}
+.btn-ghost{border-color:currentColor;color:var(--ink)}
+@media (hover:hover) and (pointer:fine){
+  .btn-primary:hover{background:var(--blue-hover)}
+  .btn-ghost:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+}
+.link{color:var(--blue-ink);font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;transition:text-decoration-color .2s ease}
+@media (hover:hover) and (pointer:fine){.link:hover{text-decoration-color:transparent}}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:40;height:var(--header-h);background:color-mix(in srgb, var(--bg) 90%, transparent);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent;transition:border-color .25s ease}
+.site-header.is-stuck{border-bottom-color:var(--line)}
+.site-header .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.mark{display:inline-flex;flex-direction:column;align-items:center;text-decoration:none;line-height:1;color:var(--ink)}
+.mark-cafe{font-family:var(--serif);font-size:.82rem;letter-spacing:.04em;margin-bottom:2px}
+.mark-name{font-family:var(--serif);font-size:1.32rem;letter-spacing:.16em;text-transform:uppercase}
+.nav{display:flex;align-items:center;gap:32px}
+.nav a:not(.btn){text-decoration:none;font-weight:500;color:var(--ink-2);position:relative;padding:6px 0;transition:color .2s ease}
+.nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .3s var(--ease-out)}
+@media (hover:hover) and (pointer:fine){
+  .nav a:not(.btn):hover{color:var(--ink)}
+  .nav a:not(.btn):hover::after{transform:scaleX(1);transform-origin:left}
+}
+.nav .btn{--h:42px;padding:0 18px;font-size:.95rem}
+.nav-call-short{display:none}
+
+/* Awning valance, after the real blue awning over the shopfront */
+.awning{position:relative;background:var(--blue);color:#fff;overflow:hidden}
+@media (prefers-color-scheme: dark){.awning{background:#1B4F9C}}
+.awning-track{display:flex;align-items:center;justify-content:center;gap:28px;height:44px;white-space:nowrap;font:700 .78rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase}
+.awning-track em{font:italic 400 1rem/1 var(--serif);letter-spacing:.02em;text-transform:none}
+.awning-track .sep{width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.55}
+.scallop{height:12px;background:radial-gradient(circle at 12px 0, #1B4F9C 11.5px, transparent 12.5px) 0 0/24px 12px repeat-x}
+.scallop-wrap{position:relative;z-index:2;margin-bottom:-12px;pointer-events:none}
+
+/* Hero */
+.hero{padding-block:clamp(40px, 6vw, 88px) clamp(48px, 7vw, 96px)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px, 5vw, 72px);align-items:center}
+.hero h1{font-size:clamp(2.6rem, 5.4vw, 4.6rem);line-height:1.04;max-width:12ch}
+.hero-lede{margin-top:24px;font-size:clamp(1.08rem, 1.4vw, 1.22rem);color:var(--ink-2);max-width:42ch}
+.hero-ctas{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px}
+.hero-art{position:relative;aspect-ratio:1/1;max-width:520px;width:100%;justify-self:end}
+
+.frame{position:relative;margin:0;background:var(--mat);padding:10px;border:7px solid var(--frame);box-shadow:var(--shadow)}
+.frame img{width:100%;height:100%;object-fit:cover}
+.hero-art .frame{position:absolute}
+.hero-art .f1{right:2%;top:0;width:58%;aspect-ratio:3/4;rotate:1.6deg}
+.hero-art .f2{left:0;bottom:4%;width:62%;aspect-ratio:16/9;rotate:-2.4deg}
+.hero-art .f2 img{object-position:50% 40%}
+
+/* Facts strip */
+.facts{border-block:1px solid var(--line)}
+.facts ul{display:grid;grid-template-columns:repeat(3,1fr)}
+.facts li{padding:28px 24px;display:flex;align-items:center;gap:16px}
+.facts li + li{border-left:1px solid var(--line)}
+.facts .big{font-family:var(--serif);font-size:2.4rem;line-height:1;color:var(--ink);white-space:nowrap}
+.facts .small{font-size:.95rem;color:var(--ink-2);line-height:1.35}
+.stars{display:flex;gap:2px;color:#C58A12;margin-bottom:4px}
+@media (prefers-color-scheme: dark){.stars{color:#E5AE3C}}
+.stars svg{width:15px;height:15px;fill:currentColor}
+
+/* Sections */
+section{position:relative}
+.section{padding-block:clamp(72px, 10vw, 136px)}
+.h2{font-size:clamp(2.1rem, 4vw, 3.3rem)}
+.lede{margin-top:18px;color:var(--ink-2);max-width:56ch;font-size:1.1rem}
+
+/* Story */
+.story .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px, 6vw, 96px);align-items:center}
+.story-art{position:relative}
+.story-art .frame.main{aspect-ratio:400/262}
+.story-art .frame.inset{position:absolute;width:44%;right:-6%;bottom:-16%;aspect-ratio:400/267;rotate:2deg}
+.story-copy p + p{margin-top:16px}
+.story-copy .lede{margin-top:24px}
+.sign{margin-top:28px;font-family:var(--serif);font-size:1.15rem}
+
+/* Signature plates */
+.plates-head{max-width:640px}
+.plates{margin-top:56px;display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(28px, 4vw, 56px)}
+.plate{display:grid;gap:22px;align-content:start}
+.plate .frame{aspect-ratio:4/3}
+.plate-side{display:grid;gap:clamp(28px, 4vw, 48px)}
+.plate-side .plate{grid-template-columns:minmax(0, 1fr) minmax(0, 1.1fr);align-items:center}
+.plate-side .frame{aspect-ratio:4/3}
+.plate h3{font-size:clamp(1.5rem, 2.2vw, 1.9rem);display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+.plate .price{font-family:var(--sans);font-weight:700;font-size:1.1rem;color:var(--blue-ink)}
+.plate p{margin-top:8px;color:var(--ink-2);font-size:1rem}
+.plate.lead h3{font-size:clamp(1.8rem, 3vw, 2.4rem)}
+.plate-side h3{flex-direction:column;align-items:flex-start;gap:6px}
+
+/* Menu */
+.menu{background:var(--surface);border-block:1px solid var(--line)}
+.menu-head{display:flex;flex-direction:column;gap:0;max-width:640px}
+.tabs{position:sticky;top:var(--header-h);z-index:20;margin-top:40px;background:var(--surface);border-bottom:1px solid var(--line)}
+.tablist{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-block:12px;scroll-snap-type:x proximity}
+.tablist::-webkit-scrollbar{display:none}
+.tab{flex:none;scroll-snap-align:start;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid transparent;background:none;color:var(--ink-2);font:600 .98rem/1 var(--sans);cursor:pointer;transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .16s var(--ease-out);-webkit-tap-highlight-color:transparent}
+.tab:active{transform:scale(.97)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+@media (hover:hover) and (pointer:fine){.tab[aria-selected="false"]:hover{border-color:var(--line);color:var(--ink)}}
+.panel{padding-top:48px}
+.panel[hidden]{display:none}
+.js .panel.is-entering{animation:panelIn .22s var(--ease-out) both}
+.tabs::after{content:"";position:absolute;right:0;top:0;bottom:1px;width:48px;pointer-events:none;background:linear-gradient(to right, transparent, var(--surface));opacity:var(--more, 0);transition:opacity .2s ease}
+@keyframes panelIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.groups{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:56px clamp(40px, 6vw, 88px);align-items:start}
+.group h3{font-size:1.7rem;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.group-note{margin-top:8px;font-size:.95rem;color:var(--ink-2)}
+.tag{display:inline-flex;align-items:center;font:600 .74rem/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:6px 10px;white-space:nowrap}
+.items{margin-top:20px;display:grid;gap:18px}
+.item-head{display:flex;align-items:baseline;gap:10px}
+.item-name{font-weight:700;font-size:1.05rem}
+.leader{flex:1;min-width:24px;border-bottom:1.5px dotted color-mix(in srgb, var(--ink-2) 55%, transparent);transform:translateY(-5px)}
+.price{font-weight:700;color:var(--ink);font-variant-numeric:lining-nums tabular-nums}
+.item-desc{margin-top:3px;font-size:.95rem;color:var(--ink-2);max-width:52ch}
+.v{display:inline-block;margin-left:6px;font:700 .68rem/1 var(--sans);color:#2F6B3A;border:1px solid currentColor;border-radius:999px;padding:3px 6px;vertical-align:2px}
+@media (prefers-color-scheme: dark){.v{color:#8FCB98}}
+.chips{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:var(--bg);border:1px solid var(--line);font-size:.95rem}
+.chips b{font-weight:700;font-variant-numeric:lining-nums tabular-nums}
+.drink-list{margin-top:20px;display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:10px 24px}
+.drink-list li{font-size:1rem}
+.drink-list small{color:var(--ink-2);font-size:.88rem}
+.menu-foot{margin-top:64px;padding-top:28px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;color:var(--ink-2);font-size:.98rem}
+
+/* Reviews */
+.reviews .wrap{display:grid;grid-template-columns:1.55fr 1fr;gap:clamp(40px, 6vw, 96px);align-items:start}
+.review-main{display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:start}
+.review-main .frame{aspect-ratio:3/4;rotate:-1.5deg}
+.review-main .frame img{object-position:62% 50%}
+blockquote{margin:0}
+.quote-big{font-family:var(--serif);font-size:clamp(1.45rem, 2.4vw, 1.95rem);line-height:1.32}
+.quote-big::before{content:"\201C";display:block;font-size:4.5rem;line-height:.6;color:var(--blue-ink);margin-bottom:12px}
+.cite{margin-top:20px;font-size:.98rem;color:var(--ink-2)}
+.cite strong{display:block;color:var(--ink);font-weight:700}
+.review-side{display:grid;gap:36px}
+.quote-sm{font-size:1.15rem;line-height:1.5}
+.review-side .quote + .quote{padding-top:36px;border-top:1px solid var(--line)}
+.mentions-title{font-weight:700;font-size:1rem}
+.mentions .chips li{background:var(--surface)}
+.reviews-head{margin-bottom:56px;max-width:640px}
+
+/* Picture wall */
+.wall-head{max-width:640px}
+.wall{margin-top:56px;display:grid;grid-template-columns:repeat(12, minmax(0, 1fr));gap:clamp(20px, 3vw, 40px);align-items:center}
+.wall .frame{padding:8px;border-width:6px;transition:rotate .5s var(--ease-out), translate .5s var(--ease-out), box-shadow .5s var(--ease-out)}
+.wall .frame:nth-child(odd){rotate:-1.2deg}
+.wall .frame:nth-child(even){rotate:1deg}
+@media (hover:hover) and (pointer:fine){
+  .wall .frame:hover{rotate:0deg;translate:0 -4px}
+}
+.w1{grid-column:1 / span 4;aspect-ratio:400/267}
+.w2{grid-column:5 / span 3;aspect-ratio:3/4}
+.w3{grid-column:8 / span 5;aspect-ratio:4/3}
+.w4{grid-column:1 / span 3;aspect-ratio:3/4}
+.w5{grid-column:4 / span 5;aspect-ratio:400/266}
+.w6{grid-column:9 / span 4;aspect-ratio:3/4;max-width:300px}
+
+/* Visit */
+.visit .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(40px, 6vw, 88px);align-items:stretch}
+.map{margin:0;background:var(--mat);padding:10px;border:7px solid var(--frame);box-shadow:var(--shadow);min-height:440px}
+.map iframe{display:block;width:100%;height:100%;border:0;filter:saturate(.85)}
+.address{margin-top:20px;font-size:1.2rem;font-style:normal;line-height:1.5}
+.status{margin-top:20px;display:inline-flex;align-items:center;gap:10px;font-weight:600}
+.status-dot{width:9px;height:9px;border-radius:50%;background:#2F8A47;box-shadow:0 0 0 4px rgb(47 138 71 / .18)}
+.status.closed .status-dot{background:#A4472F;box-shadow:0 0 0 4px rgb(164 71 47 / .18)}
+.hours{margin-top:20px;width:100%;border-collapse:collapse;font-size:1rem}
+.hours th,.hours td{padding:9px 0;text-align:left;font-weight:400}
+.hours td{text-align:right;font-variant-numeric:lining-nums tabular-nums;color:var(--ink-2)}
+.hours tr{border-bottom:1px dotted color-mix(in srgb, var(--ink-2) 40%, transparent)}
+.hours tr:last-child{border-bottom:0}
+.hours tr.today th,.hours tr.today td{font-weight:700;color:var(--ink)}
+.hours tr.today th::after{content:"Today";margin-left:10px;font:700 .7rem/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--blue-ink)}
+.visit-ctas{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
+.visit-note{margin-top:20px;color:var(--ink-2);font-size:.98rem}
+
+/* Footer */
+.site-footer{background:var(--footer);color:var(--footer-ink);padding-bottom:40px}
+.footer-band{height:18px;background:#1B4F9C}
+.footer-mark{font-family:var(--serif);text-transform:uppercase;letter-spacing:.08em;font-size:clamp(3rem, 11.5vw, 10rem);line-height:.9;padding-top:clamp(56px, 8vw, 96px);color:var(--footer-ink);white-space:nowrap;overflow:hidden}
+.footer-mark small{display:block;font-size:.2em;letter-spacing:.06em;text-transform:none;margin-bottom:.35em;color:var(--footer-ink-2)}
+.footer-cols{margin-top:56px;display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:32px;font-size:1rem}
+.footer-cols h2{font:700 .8rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--footer-ink-2);margin-bottom:14px}
+.footer-cols p,.footer-cols a{color:var(--footer-ink);line-height:1.7}
+.footer-cols a{text-decoration:none;display:inline-flex;align-items:center;gap:10px;min-height:32px;transition:opacity .2s ease}
+@media (hover:hover) and (pointer:fine){.footer-cols a:hover{opacity:.72}}
+.socials{display:grid;gap:4px}
+.footer-base{margin-top:56px;padding-top:24px;border-top:1px solid rgb(241 232 218 / .14);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:var(--footer-ink-2);font-size:.9rem}
+.site-footer :focus-visible{outline-color:var(--footer-ink)}
+
+
+/* Frames hang into place as they scroll in; text stays put */
+.js .reveal .frame{opacity:0;transform:translateY(-14px);transition:opacity .7s var(--ease-out), transform .8s var(--ease-out), rotate .5s var(--ease-out), translate .5s var(--ease-out), box-shadow .5s var(--ease-out)}
+.js .reveal.in .frame{opacity:1;transform:none}
+.js .reveal.in .frame:nth-child(2){transition-delay:.07s}
+.js .reveal.in .frame:nth-child(3){transition-delay:.14s}
+.js .reveal.in .frame:nth-child(4){transition-delay:.21s}
+.js .reveal.in .frame:nth-child(5){transition-delay:.28s}
+.js .reveal.in .frame:nth-child(6){transition-delay:.35s}
+::selection{background:var(--blue);color:#fff}
+html{scrollbar-color:color-mix(in srgb, var(--ink-2) 55%, transparent) var(--bg)}
+
+/* Hero entrance */
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes hang{from{opacity:0;translate:0 -18px}to{opacity:1;translate:0 0}}
+.hero h1,.hero-lede,.hero-ctas{animation:rise .8s var(--ease-out) both}
+.hero-lede{animation-delay:.08s}
+.hero-ctas{animation-delay:.16s}
+.hero-art .f1{animation:hang .9s var(--ease-out) .12s both}
+.hero-art .f2{animation:hang .9s var(--ease-out) .24s both}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition-duration:.01ms !important;transition-delay:0s !important}
+  .js .reveal .frame{opacity:1;transform:none}
+}
+
+/* Tablet */
+@media (max-width: 960px){
+  .nav a:not(.btn){display:none}
+  .hero .wrap,.story .wrap,.reviews .wrap,.visit .wrap{grid-template-columns:1fr}
+  .hero-art{justify-self:center;max-width:460px}
+  .story-art{max-width:560px;margin-bottom:48px}
+  .plates{grid-template-columns:1fr}
+  .plate.lead .frame{max-width:560px}
+  .footer-cols{grid-template-columns:repeat(2, minmax(0, 1fr))}
+  .facts li{flex-direction:column;align-items:flex-start;gap:8px}
+  .map{min-height:0;aspect-ratio:4/3}
+  .w1{grid-column:1 / span 6}.w2{grid-column:7 / span 6}
+  .w3{grid-column:1 / span 7}.w4{grid-column:8 / span 5}
+  .w5{grid-column:1 / span 7}.w6{grid-column:8 / span 5;max-width:none}
+}
+
+/* Phone */
+@media (max-width: 640px){
+  :root{--header-h:60px}
+  body{font-size:1rem}
+  .mark-name{font-size:1.1rem}
+  .nav-call-long{display:none}
+  .nav-call-short{display:inline}
+  .awning-track{gap:18px;height:38px;font-size:.7rem}
+  .awning-track .hide-sm{display:none}
+  .hero{padding-top:36px}
+  .hero h1{font-size:clamp(2.35rem, 10.5vw, 2.9rem)}
+  .hero-ctas .btn{flex:1 1 auto}
+  .hero-ctas .btn-ghost{display:none}
+  .hero-art{margin-top:8px;aspect-ratio:1/1.02}
+  .facts ul{grid-template-columns:1fr}
+  .facts li{padding:18px 0;flex-direction:row;align-items:center;gap:16px}
+  .facts li + li{border-left:0;border-top:1px solid var(--line)}
+  .facts .big{font-size:2rem;min-width:84px}
+  .story-art .frame.inset{right:-2%;bottom:-20%}
+  .plate-side .plate{grid-template-columns:1fr}
+  .groups{grid-template-columns:1fr;gap:48px}
+  .tabs{margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter)}
+  .review-main{grid-template-columns:1fr}
+  .review-main .frame{max-width:180px}
+  .wall{grid-template-columns:repeat(2, minmax(0, 1fr));gap:16px}
+  .wall .frame{grid-column:auto !important;max-width:none;padding:6px;border-width:5px}
+  .wall .w3,.wall .w5{grid-column:1 / -1 !important}
+  .map{aspect-ratio:1/1}
+  .visit-ctas .btn{flex:1 1 auto}
+  .footer-cols{grid-template-columns:1fr}
+  .footer-mark{font-size:13.2vw}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.5 1.3 6.6L12 17.2l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></symbol>
+</svg>
+
+<header class="site-header" id="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Cafe Parisienne, back to top">
+      <span class="mark-cafe">Café</span>
+      <span class="mark-name">Parisienne</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#menu">Menu</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+      <a class="btn btn-primary" href="tel:+442079245523">
+        <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+        <span class="nav-call-long num">Call 020 7924 5523</span><span class="nav-call-short">Call</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="awning" role="presentation">
+    <div class="awning-track" aria-hidden="true">
+      <span>Breakfast</span><span class="sep"></span>
+      <span>Panini</span><span class="sep"></span>
+      <em class="hide-sm">Freshly prepared good natural food</em><span class="sep hide-sm"></span>
+      <span class="hide-sm">Sandwiches</span><span class="sep hide-sm"></span>
+      <span>Pasta</span>
+    </div>
+  </div>
+  <div class="scallop-wrap" aria-hidden="true"><div class="scallop"></div></div>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div>
+        <h1 id="hero-title">Proper breakfasts on Lavender Hill.</h1>
+        <p class="hero-lede">A family-run café in Battersea serving full English breakfasts, omelettes, paninis and good coffee, seven days a week.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#menu">
+            <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>See the menu
+          </a>
+          <a class="btn btn-ghost" href="tel:+442079245523">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span class="num">Call 020 7924 5523</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <figure class="frame f1">
+          <img src="image/3.jpg" width="225" height="300" fetchpriority="high" alt="Two full breakfasts seen from above, with fried eggs, mushrooms, beans, toast and two cappuccinos">
+        </figure>
+        <figure class="frame f2">
+          <img src="image/6.jpg" width="400" height="225" alt="Eggs Benedict on a blue plate with grilled tomatoes and hash browns, next to a cup of lemon tea">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="facts">
+    <ul class="wrap">
+      <li>
+        <span class="big num">4.8</span>
+        <span class="small">
+          <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+          <span class="num">1,168</span> Google reviews
+        </span>
+      </li>
+      <li>
+        <span class="big">7 days</span>
+        <span class="small">From 6:30am, Monday to Saturday.<br>From 7am on Sundays.</span>
+      </li>
+      <li>
+        <span class="big num">225</span>
+        <span class="small">Lavender Hill, Battersea.<br>Tables outside when it's dry.</span>
+      </li>
+    </ul>
+  </div>
+
+  <section class="section story" id="story" aria-labelledby="story-title">
+    <div class="wrap">
+      <div class="story-art reveal">
+        <figure class="frame main">
+          <img src="image/interior.jpg" width="400" height="262" loading="lazy" alt="The long dining room, with skylights, wooden floors and black-and-white photographs along both walls">
+        </figure>
+        <figure class="frame inset">
+          <img src="image/outerior%202.jpg" width="400" height="266" loading="lazy" alt="The shopfront: a brown Café Parisienne sign above a blue awning, with bistro tables on the pavement">
+        </figure>
+      </div>
+      <div class="story-copy reveal">
+        <h2 class="h2" id="story-title">Freshly prepared, good natural food.</h2>
+        <p class="lede">It's printed on the awning outside, and it's still the idea. Cafe Parisienne is a family-run café, owned by Kazim and his wife, cooking big breakfasts, paninis and pasta for Battersea from early morning.</p>
+        <p class="lede">Sit under the skylights and the old photographs, or take a chair on the pavement when the sun is out. Regulars say it feels like family, and first-timers tend to come back.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="signatures" aria-labelledby="sig-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="plates-head reveal">
+        <h2 class="h2" id="sig-title">Start with a proper breakfast.</h2>
+        <p class="lede">Three plates from the breakfast menu, photographed as they arrive at the table.</p>
+      </div>
+      <div class="plates">
+        <article class="plate lead reveal">
+          <figure class="frame">
+            <img src="image/4.jpg" width="400" height="300" loading="lazy" alt="English Breakfast: two fried eggs, bacon, sausage, grilled tomatoes and baked beans, with a plate of toast">
+          </figure>
+          <div>
+            <h3>English Breakfast <span class="price num">£10.50</span></h3>
+            <p>Two eggs, two bacon, one sausage, grilled tomato, baked beans and two toast.</p>
+          </div>
+        </article>
+        <div class="plate-side">
+          <article class="plate reveal">
+            <figure class="frame">
+              <img src="image/6.jpg" width="400" height="225" loading="lazy" alt="Eggs Benedict with hollandaise, grilled tomatoes and hash browns">
+            </figure>
+            <div>
+              <h3>Eggs Benedict <span class="price num">£10.80</span></h3>
+              <p>English muffin halves topped with ham, two poached eggs and hollandaise, with grilled tomato and two hash browns.</p>
+            </div>
+          </article>
+          <article class="plate reveal">
+            <figure class="frame">
+              <img src="image/2.jpg" width="400" height="300" loading="lazy" alt="All American: two waffles dusted with sugar, two fried eggs, hash browns, bacon, berries, maple syrup and clotted cream">
+            </figure>
+            <div>
+              <h3>All American <span class="price num">£11.90</span></h3>
+              <p>Two waffles, two eggs, two hash browns, bacon, Canadian maple syrup and clotted cream.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section menu" id="menu" aria-labelledby="menu-title">
+    <div class="wrap">
+      <div class="menu-head reveal">
+        <h2 class="h2" id="menu-title">The menu</h2>
+        <p class="lede">Breakfast, lunch and everything in between. Where a price isn't listed here, it's on the board in the café.</p>
+      </div>
+
+      <div class="tabs">
+        <div class="tablist" role="tablist" aria-label="Menu sections">
+          <button class="tab" role="tab" id="tab-breakfast" aria-controls="panel-breakfast" aria-selected="true">Breakfasts</button>
+          <button class="tab" role="tab" id="tab-small" aria-controls="panel-small" aria-selected="false" tabindex="-1">Small plates &amp; extras</button>
+          <button class="tab" role="tab" id="tab-eggs" aria-controls="panel-eggs" aria-selected="false" tabindex="-1">Omelettes &amp; salads</button>
+          <button class="tab" role="tab" id="tab-burgers" aria-controls="panel-burgers" aria-selected="false" tabindex="-1">Burgers &amp; chicken</button>
+          <button class="tab" role="tab" id="tab-lunch" aria-controls="panel-lunch" aria-selected="false" tabindex="-1">Wraps, pasta &amp; jackets</button>
+          <button class="tab" role="tab" id="tab-drinks" aria-controls="panel-drinks" aria-selected="false" tabindex="-1">Drinks</button>
+        </div>
+      </div>
+
+      <!-- Breakfasts -->
+      <div class="panel" role="tabpanel" id="panel-breakfast" aria-labelledby="tab-breakfast" tabindex="0">
+        <div class="groups">
+          <div class="group">
+            <h3>English breakfast</h3>
+            <ul class="items">
+              <li><div class="item-head"><span class="item-name">All Day Breakfast</span><span class="leader"></span><span class="price">£7.50</span></div><p class="item-desc">One egg, one bacon, one sausage, baked beans, chips.</p></li>
+              <li><div class="item-head"><span class="item-name">English Breakfast</span><span class="leader"></span><span class="price">£10.50</span></div><p class="item-desc">Two eggs, two bacon, one sausage, grilled tomato, baked beans, two toast.</p></li>
+              <li><div class="item-head"><span class="item-name">Parisienne Full Breakfast</span><span class="leader"></span><span class="price">£9.90</span></div><p class="item-desc">One egg, two sausage, one bacon, grilled tomato, mushrooms, chips.</p></li>
+              <li><div class="item-head"><span class="item-name">Vegetarian Breakfast<span class="v" title="Vegetarian">V</span></span><span class="leader"></span><span class="price">£10.50</span></div><p class="item-desc">One vegetarian sausage, two eggs, grilled tomato, mushrooms, baked beans, two toast.</p></li>
+              <li><div class="item-head"><span class="item-name">Brunch Breakfast Platter</span><span class="leader"></span><span class="price">£12.90</span></div><p class="item-desc">Two eggs, two sausages, two bacon, grilled tomato, mushrooms, baked beans, two toast.</p></li>
+              <li><div class="item-head"><span class="item-name">Mega Breakfast</span><span class="leader"></span><span class="price">£15.50</span></div><p class="item-desc">Three eggs, one sausage, one bacon, grilled tomato, mushrooms, baked beans, two hash browns, 2oz burger, two toast.</p></li>
+              <li><div class="item-head"><span class="item-name">Eggs Benedict</span><span class="leader"></span><span class="price">£10.80</span></div><p class="item-desc">English muffin halves with ham, two poached eggs, hollandaise, grilled tomato and two hash browns.</p></li>
+              <li><div class="item-head"><span class="item-name">Eggs Royale</span><span class="leader"></span><span class="price">£12.90</span></div><p class="item-desc">English muffin halves with smoked salmon, two poached eggs, hollandaise, grilled tomato and two hash browns.</p></li>
+            </ul>
+          </div>
+          <div class="group">
+            <h3>Irish breakfast</h3>
+            <ul class="items">
+              <li><div class="item-head"><span class="item-name">Full Paddy Breakfast</span><span class="leader"></span><span class="price">£12.90</span></div><p class="item-desc">Two eggs, one sausage, one bacon, white puddings, black puddings, grilled tomato, mushrooms, baked beans, two slices of brown toast.</p></li>
+              <li><div class="item-head"><span class="item-name">Veggie Irish Breakfast<span class="v" title="Vegetarian">V</span></span><span class="leader"></span><span class="price">£10.80</span></div><p class="item-desc">Two eggs, mushrooms, baked beans, two hash browns, grilled tomato, potato cakes, two slices of brown toast.</p></li>
+            </ul>
+            <h3 style="margin-top:48px">American breakfast</h3>
+            <ul class="items">
+              <li><div class="item-head"><span class="item-name">Lumberjack</span><span class="leader"></span><span class="price">£11.90</span></div><p class="item-desc">Two eggs, three pancakes, one bacon, home made sausage, Canadian maple syrup and clotted cream.</p></li>
+              <li><div class="item-head"><span class="item-name">All American</span><span class="leader"></span><span class="price">£11.90</span></div><p class="item-desc">Two waffles, two eggs, two hash browns, one bacon, Canadian maple syrup and clotted cream.</p></li>
+              <li><div class="item-head"><span class="item-name">French Toast Breakfast</span><span class="leader"></span><span class="price">£11.90</span></div><p class="item-desc">Two thick slices of bread dipped in batter and fried golden, two eggs, two bacon, two sausage and Canadian maple syrup.</p></li>
+              <li><div class="item-head"><span class="item-name">Pancakes or Waffles</span><span class="leader"></span><span class="price">£6.70</span></div><p class="item-desc">Two waffles or three Scotch pancakes, with Canadian maple syrup and clotted cream.</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Small plates & extras -->
+      <div class="panel" role="tabpanel" id="panel-small" aria-labelledby="tab-small" tabindex="0" hidden>
+        <div class="groups">
+          <div class="group">
+            <h3>Small breakfast</h3>
+            <ul class="items">
+              <li><div class="item-head"><span class="item-name">3 Scrambled Eggs on Two Toast</span><span class="leader"></span><span class="price">£5.50</span></div><p class="item-desc">With real butter.</p></li>
+              <li><div class="item-head"><span class="item-name">Two Eggs on Two Toast</span><span class="leader"></span><span class="price">£4.50</span></div></li>
+              <li><div class="item-head"><span class="item-name">2 Poached Eggs on Toast with Avocado</span><span class="leader"></span><span class="price">£6.40</span></div></li>
+              <li><div class="item-head"><span class="item-name">Ham, Egg &amp; Chips</span><span class="leader"></span><span class="price">£5.40</span></div></li>
+              <li><div class="item-head"><span class="item-name">2 Burgers, Egg &amp; Chips</span><span class="leader"></span><span class="price">£6.40</span></div></li>
+              <li><div class="item-head"><span class="item-name">Portion of Chips</span><span class="leader"></span><span class="price">£3.20</span></div></li>
+              <li><div class="item-head"><span class="item-name">Two Toast</span><span class="leader"></span><span class="price">£1.30</span></div><p class="item-desc">White or brown.</p></li>
+              <li><div class="item-head"><span class="item-name">Marmalade or Jam</span><span class="leader"></span><span class="price">30p</span></div></li>
+            </ul>
+          </div>
+          <div class="group">
+            <h3>Build your own <span class="tag">Price in café</span></h3>
+            <p class="group-note">Pick your own breakfast combination. Scrambled eggs are made with two eggs.</p>
+            <ul class="chips">
+              <li>Egg</li><li>Bacon</li><li>Sausage</li><li>Vegetarian sausage</li><li>Mushrooms</li><li>Grilled tomato</li><li>2oz burger, no bun</li><li>Two toast</li>
+            </ul>
+            <h3 style="margin-top:48px">Add to any plate</h3>
+            <ul class="chips">
+              <li>1 egg <b>£1.30</b></li><li>1 bacon <b>£1.30</b></li><li>1 sausage <b>£1.30</b></li><li>1 vegetarian sausage <b>£1.30</b></li>
+              <li>2 black puddings <b>£1.30</b></li><li>3 white puddings <b>£1.30</b></li><li>2oz burger, no bun <b>£1.30</b></li>
+              <li>Baked beans <b>£1.30</b></li><li>Mushrooms <b>£1.30</b></li><li>Grilled tomato <b>£1.30</b></li>
+              <li>2 toasts <b>£1.30</b></li><li>2 bread slices <b>£1.30</b></li><li>2 fried slices <b>£1.30</b></li>
+              <li>Half avocado <b>£1.90</b></li><li>2 hash browns <b>£2.20</b></li><li>Chips <b>£2.20</b></li>
+              <li>3 pancakes <b>£2.60</b></li><li>2 waffles <b>£2.60</b></li><li>2 French toasts <b>£3.90</b></li>
+              <li>Canadian maple syrup <b>£1.90</b></li><li>Clotted cream <b>£1.90</b></li><li>Jam or marmalade <b>30p</b></li><li>Marmite <b>30p</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Omelettes & salads -->
+      <div class="panel" role="tabpanel" id="panel-eggs" aria-labelledby="tab-eggs" tabindex="0" hidden>
+        <div class="groups">
+          <div class="group">
+            <h3>Omelettes</h3>
+            <p class="group-note">Three eggs, served with chips and salad.</p>
+            <ul class="items">
+              <li><div class="item-head"><span class="item-name">Miami Omelette</span><span class="leader"></span><span class="price">£10.90</span></div><p class="item-desc">Roast chicken breast, cheddar, roast peppers.</p></li>
+              <li><div class="item-head"><span class="item-name">Vegetarian Omelette<span class="v" title="Vegetarian">V</span></span><span class="leader"></span><span class="price">£10.90</span></div><p class="item-desc">Freshly chopped seasonal vegetables.</p></li>
+              <li><div class="item-head"><span class="item-name">Omelette Bella</span><span class="leader"></span><span class="price">£10.90</span></div><p class="item-desc">Crispy smoked bacon, roast peppers, cheddar.</p></li>
+              <li><div class="item-head"><span class="item-name">Any Filling Omelette</span><span class="leader"></span><span class="price">£9.30</span></div><p class="item-desc">Create your own from ham, bacon, cheddar, mushrooms, tomato, roast peppers or onion. Extra fillings 80p each.</p></li>
+            </ul>
+            <h3 style="margin-top:48px">Starters &amp; short orders</h3>
+            <ul class="items">
+              <li><div class="item-head"><span class="item-name">Tricolore Salad</span><span class="leader"></span><span class="price">£7.10</span></div><p class="item-desc">Mozzarella, avocado, tomato, French dressing.</p></li>
+              <li><div class="item-head"><span class="item-name">Avocado Salad</span><span class="leader"></span><span class="price">£7.10</span></div><p class="item-desc">Mixed salad with avocado and olives, French dressing.</p></li>
+            </ul>
+          </div>
+          <div class="group">
+            <h3>Salads <span class="tag">Price in café</span></h3>
+            <p class="group-note">A selection of fresh seasonal vegetables, topped your way.</p>
+            <ul class="items">
+              <li><div class="item-head"><span class="item-name">Chicken Caesar Salad</span></div><p class="item-desc">Roasted chicken strips, black olives, parmesan and an anchovy, with Caesar dressing.</p></li>
+              <li><div class="item-head"><span class="item-name">Italian Salad<span class="v" title="Vegetarian">V</span></span></div><p class="item-desc">Black olives, fresh peppers and mozzarella, with French dressing.</p></li>
+              <li><div class="item-head"><span class="item-name">Greek Salad<span class="v" title="Vegetarian">V</span></span></div><p class="item-desc">Feta, red onion and black olives, with olive oil and a slice of lemon.</p></li>
+              <li><div class="item-head"><span class="item-name">Chunk Tuna Salad</span></div><p class="item-desc">Tuna chunks, fresh peppers, sliced onion and pickled cucumber, with French dressing.</p></li>
+              <li><div class="item-head"><span class="item-name">House Salad</span></div><p class="item-desc">Tomato, cucumber, carrot and red cabbage with two toppings: honey roast ham, cheddar, mozzarella, roast chicken strips, Italian salami or prawn mayonnaise. Extra toppings £1.30 each.</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Burgers & chicken -->
+      <div class="panel" role="tabpanel" id="panel-burgers" aria-labelledby="tab-burgers" tabindex="0" hidden>
+        <div class="groups">
+          <div class="group">
+            <h3>Hamburgers <span class="tag">Price in café</span></h3>
+            <p class="group-note">Thick, juicy 100% pure beef in a 5" bun, served with chips and salad. Extra cheese, bacon or ham £1.30 each.</p>
+            <ul class="items">
+              <li><div class="item-head"><span class="item-name">Parisienne Hamburger</span></div><p class="item-desc">Mayonnaise, tomato, pickled cucumber and lettuce. Just ask if you'd like it plain.</p></li>
+              <li><div class="item-head"><span class="item-name">Cheeseburger</span></div><p class="item-desc">With two slices of cheddar.</p></li>
+              <li><div class="item-head"><span class="item-name">Chilli Burger</span></div><p class="item-desc">Smothered in spicy chilli sauce.</p></li>
+              <!-- TODO: confirm this burger's name with the owner -->
+              <li><div class="item-head"><span class="item-name">Cheese &amp; Sausage Burger</span></div><p class="item-desc">Two slices of cheddar and a sausage.</p></li>
+            </ul>
+          </div>
+          <div class="group">
+            <h3>Chicken</h3>
+            <ul class="items">
+              <li><div class="item-head"><span class="item-name">Chicken Fillet Burger</span><span class="leader"></span><span class="price">£10.50</span></div><p class="item-desc">Grilled chicken in a bun with mayonnaise, lettuce, tomato and pickled cucumber, with chips.</p></li>
+              <li><div class="item-head"><span class="item-name">Boston Chicken Burger</span><span class="leader"></span><span class="price">£11.90</span></div><p class="item-desc">Grilled chicken topped with Italian salami and melted mozzarella, with mayonnaise, lettuce, tomato, pickled cucumber and chips.</p></li>
+              <li><div class="item-head"><span class="item-name">New Yorker Burger</span><span class="leader"></span><span class="price">£11.90</span></div><p class="item-desc">Grilled chicken topped with bacon and melted cheddar, with mayonnaise, lettuce, tomato, pickled cucumber and chips.</p></li>
+              <li><div class="item-head"><span class="item-name">Chicken Breast with Mushroom Sauce</span><span class="leader"></span><span class="price">£11.90</span></div><p class="item-desc">Grilled and smothered in creamy mushroom sauce, with chips and salad.</p></li>
+              <li><div class="item-head"><span class="item-name">Chicken Escalope</span><span class="leader"></span><span class="price">£11.90</span></div><p class="item-desc">Crispy golden fried chicken breast with chips and salad.</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wraps, pasta & jackets -->
+      <div class="panel" role="tabpanel" id="panel-lunch" aria-labelledby="tab-lunch" tabindex="0" hidden>
+        <div class="groups">
+          <div class="group">
+            <h3>Grilled wraps <span class="tag">Price in café</span></h3>
+            <p class="group-note">All with basil olive oil sauce.</p>
+            <ul class="items">
+              <li><div class="item-head"><span class="item-name">Chicken Wrap</span></div><p class="item-desc">Roast chicken, roast peppers, mushrooms, cheddar.</p></li>
+              <li><div class="item-head"><span class="item-name">Crispy Bacon Wrap</span></div><p class="item-desc">Bacon, roast peppers, fried onions, cheddar.</p></li>
+              <li><div class="item-head"><span class="item-name">Pork Sausage Wrap</span></div><p class="item-desc">Sausage, roast peppers, fried onions, cheddar.</p></li>
+              <li><div class="item-head"><span class="item-name">Chicken Escalope Wrap</span></div><p class="item-desc">Chicken escalope, roast peppers, mushrooms, cheddar.</p></li>
+              <li><div class="item-head"><span class="item-name">Veggie Wrap<span class="v" title="Vegetarian">V</span></span></div><p class="item-desc">Avocado, roast peppers, mushrooms, cheddar.</p></li>
+              <li><div class="item-head"><span class="item-name">Falafel Hummus Wrap<span class="v" title="Vegetarian">V</span></span></div><p class="item-desc">Falafel, hummus and mixed salad.</p></li>
+            </ul>
+            <h3 style="margin-top:48px">Paninis &amp; sandwiches <span class="tag">Price in café</span></h3>
+            <p class="group-note">A choice of 14 grilled panini melts and 10 grilled wrapped sandwiches. Ask at the counter for today's fillings.</p>
+          </div>
+          <div class="group">
+            <h3>Pasta &amp; fish <span class="tag">Price in café</span></h3>
+            <ul class="items">
+              <li><div class="item-head"><span class="item-name">Spaghetti Bolognese</span></div></li>
+              <li><div class="item-head"><span class="item-name">Vegetarian Spaghetti<span class="v" title="Vegetarian">V</span></span></div></li>
+              <li><div class="item-head"><span class="item-name">Lasagna</span></div><p class="item-desc">With chips and salad.</p></li>
+              <li><div class="item-head"><span class="item-name">Scampi</span></div><p class="item-desc">With chips and salad.</p></li>
+            </ul>
+            <h3 style="margin-top:48px">Jacket potatoes <span class="tag">Price in café</span></h3>
+            <p class="group-note">Served with mixed salad and one filling. Extra fillings £1.30 each.</p>
+            <ul class="chips">
+              <li>Baked beans</li><li>Cheddar cheese</li><li>Bolognese sauce</li><li>Egg mayonnaise</li><li>Tuna mayonnaise</li>
+              <li>Chilli chicken</li><li>Tuna sweetcorn</li><li>Chilli tuna</li><li>Roast chicken</li><li>Prawn mayonnaise</li>
+              <li>Honey roast ham</li><li>Mozzarella</li><li>Mushrooms</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drinks -->
+      <div class="panel" role="tabpanel" id="panel-drinks" aria-labelledby="tab-drinks" tabindex="0" hidden>
+        <div class="groups">
+          <div class="group">
+            <h3>Coffee &amp; tea <span class="tag">Price in café</span></h3>
+            <ul class="drink-list">
+              <li>Tea <small>large</small></li><li>Coffee</li>
+              <li>Espresso <small>single</small></li><li>Macchiato <small>single</small></li>
+              <li>Americano</li><li>Cappuccino</li>
+              <li>Café latte</li><li>Flat white</li>
+              <li>Café mocha</li><li>Hot chocolate</li>
+              <li>Iced coffee</li><li>Iced cappuccino</li>
+              <li>Lemon tea</li><li>Earl Grey</li>
+              <li>Chamomile</li><li>Peppermint</li>
+              <li>Green tea</li>
+            </ul>
+          </div>
+          <div class="group">
+            <h3>Cold drinks <span class="tag">Price in café</span></h3>
+            <ul class="drink-list">
+              <li>Fresh orange juice</li><li>Fresh apple juice</li>
+              <li>Mixed fruit juice</li><li>Mineral water</li>
+              <li>Coke, 7up, Fanta <small>can</small></li><li>San Pellegrino <small>can</small></li>
+              <li>Red Bull <small>can</small></li><li>Coke, Diet Coke, Lucozade, Oasis, Iced Tea <small>bottle</small></li>
+            </ul>
+            <h3 style="margin-top:48px">Milkshakes <span class="tag">Price in café</span></h3>
+            <ul class="chips">
+              <li>Banana</li><li>Chocolate</li><li>Strawberry</li><li>Pineapple</li><li>Vanilla</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-foot">
+        <p>Allergies or dietary needs? Tell us when you order and we'll help.</p>
+        <a class="link num" href="tel:+442079245523">Call 020 7924 5523</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
+    <div class="wrap" style="display:block">
+      <div class="reviews-head reveal">
+        <h2 class="h2" id="reviews-title">4.8 on Google, from 1,168 reviews.</h2>
+        <p class="lede">A few words from people who've eaten here.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="review-main reveal">
+        <figure class="frame">
+          <img src="image/8.jpg" width="400" height="300" loading="lazy" alt="Two men sitting together at a café table and smiling, one wearing a chequered apron">
+        </figure>
+        <blockquote>
+          <p class="quote-big">I met the legendary great owner Kazim and his wife. The food, service, was absolutely 10/10. Very much a family feel to the place.</p>
+          <footer class="cite"><strong>Simon</strong>ST-Plumbing &amp; Heating Services, Google Local Guide</footer>
+        </blockquote>
+      </div>
+      <div class="review-side">
+        <blockquote class="quote reveal">
+          <p class="quote-sm">“The owner is a great and very friendly guy. The food is excellent, service is fast, coffee is good too!”</p>
+          <footer class="cite"><strong>Captain Tan</strong>Google Local Guide</footer>
+        </blockquote>
+        <blockquote class="quote reveal">
+          <p class="quote-sm">“We absolutely loved this little café!”</p>
+          <footer class="cite"><strong>Alondra Bolanos</strong>Google Local Guide, staying nearby</footer>
+        </blockquote>
+        <div class="mentions reveal">
+          <p class="mentions-title">What reviewers mention most</p>
+          <ul class="chips">
+            <li>Welcoming staff <b>35</b></li><li>Panini <b>10</b></li><li>Outdoor seating <b>5</b></li>
+          </ul>
+          <p style="margin-top:24px"><a class="link" href="https://maps.app.goo.gl/f6p3mL1TRf2A9iKS9" target="_blank" rel="noopener">Read all reviews on Google</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="gallery" aria-labelledby="wall-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="wall-head reveal">
+        <h2 class="h2" id="wall-title">Inside and outside 225 Lavender Hill.</h2>
+      </div>
+      <div class="wall reveal">
+        <figure class="frame w1"><img src="image/outerior.jpg" width="400" height="267" loading="lazy" alt="The café front on a sunny day, with rattan chairs and tables on the pavement"></figure>
+        <figure class="frame w2"><img src="image/1.jpg" width="225" height="300" loading="lazy" alt="A cooked breakfast on a blue plate beside a bottle of HP Sauce"></figure>
+        <figure class="frame w3"><img src="image/2.jpg" width="400" height="300" loading="lazy" alt="Waffles with eggs, hash browns, bacon, berries, maple syrup and cream"></figure>
+        <figure class="frame w4"><img src="image/5.jpg" width="225" height="300" loading="lazy" alt="A long table set with more than a dozen breakfast plates for a group"></figure>
+        <figure class="frame w5"><img src="image/interior.jpg" width="400" height="262" loading="lazy" alt="The dining room with skylights and framed black-and-white photographs"></figure>
+        <figure class="frame w6"><img src="image/7.jpg" width="225" height="300" loading="lazy" alt="Breakfast plates and toast laid out on a table for a group"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section visit" id="visit" aria-labelledby="visit-title" style="padding-top:0">
+    <div class="wrap">
+      <figure class="map reveal">
+        <iframe title="Map showing Cafe Parisienne at 225 Lavender Hill, London SW11 1JR" src="https://www.google.com/maps?q=Cafe+Parisienne,+225+Lavender+Hill,+London+SW11+1JR&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </figure>
+      <div class="reveal">
+        <h2 class="h2" id="visit-title">Come in for breakfast.</h2>
+        <address class="address">225 Lavender Hill<br>Battersea, London SW11 1JR</address>
+        <p class="status" id="status" aria-live="polite"><span class="status-dot" aria-hidden="true"></span><span id="status-text">Open seven days a week</span></p>
+        <table class="hours" aria-label="Opening hours">
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td>6:30am to 3:30pm</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>6:30am to 3:30pm</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>6:30am to 3:30pm</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>6:30am to 3:30pm</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>6:30am to 3:30pm</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>6:30am to 3:30pm</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>7:00am to 3:30pm</td></tr>
+          </tbody>
+        </table>
+        <div class="visit-ctas">
+          <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Cafe+Parisienne,+225+Lavender+Hill,+London+SW11+1JR" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Get directions
+          </a>
+          <a class="btn btn-ghost" href="tel:+442079245523">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span class="num">Call 020 7924 5523</span>
+          </a>
+        </div>
+        <p class="visit-note">Bigger group? Call ahead and we'll set a table.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div aria-hidden="true"><div class="footer-band"></div><div class="scallop"></div></div>
+  <div class="wrap">
+    <p class="footer-mark" aria-hidden="true"><small>Café</small>Parisienne</p>
+    <div class="footer-cols">
+      <div>
+        <h2>Find us</h2>
+        <p>225 Lavender Hill<br>Battersea, London<br>SW11 1JR</p>
+      </div>
+      <div>
+        <h2>Hours</h2>
+        <p>Mon to Sat, 6:30am to 3:30pm<br>Sunday, 7:00am to 3:30pm</p>
+      </div>
+      <div>
+        <h2>Call</h2>
+        <a class="num" href="tel:+442079245523"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>020 7924 5523</a>
+      </div>
+      <div>
+        <h2>Follow</h2>
+        <div class="socials">
+          <a href="https://www.facebook.com/profile.php?id=100055158892146" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-fb"/></svg>Facebook</a>
+          <!-- TODO: swap for the café's Instagram profile URL; this link is a single post -->
+          <a href="https://www.instagram.com/p/De6OkrCuR3_/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>© <span id="year">2026</span> Cafe Parisienne, Lavender Hill</p>
+      <a href="#top" style="color:inherit">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(){
+  var doc = document.documentElement;
+  doc.classList.add('js');
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Header hairline once the page scrolls past the awning
+  var header = document.querySelector('.site-header');
+  var awning = document.querySelector('.awning');
+  if ('IntersectionObserver' in window && awning){
+    new IntersectionObserver(function(e){ header.classList.toggle('is-stuck', !e[0].isIntersecting); }).observe(awning);
+  }
+
+  // Fade hint on the menu tab bar while more tabs are hidden to the right
+  var tabsBar = document.querySelector('.tabs'), tablist = document.querySelector('.tablist');
+  function edge(){ tabsBar.style.setProperty('--more', tablist.scrollLeft + tablist.clientWidth < tablist.scrollWidth - 4 ? 1 : 0); }
+  tablist.addEventListener('scroll', edge, { passive: true });
+  window.addEventListener('resize', edge);
+  edge();
+
+  // Reveal on scroll
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // Menu tabs (WAI-ARIA tabs pattern)
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function select(tab, focus){
+    tabs.forEach(function(t){
+      var on = t === tab;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      var p = document.getElementById(t.getAttribute('aria-controls'));
+      if (on){
+        p.hidden = false;
+        p.classList.remove('is-entering'); void p.offsetWidth; p.classList.add('is-entering');
+      } else { p.hidden = true; }
+    });
+    if (focus) tab.focus();
+    var list = tab.parentNode;
+    list.scrollTo({ left: tab.offsetLeft - list.offsetLeft - 16, behavior: 'smooth' });
+    // If the tab bar is stuck, jump back to the top of the new panel
+    var tabsBar = document.querySelector('.tabs');
+    var headerH = header.offsetHeight;
+    if (tabsBar.getBoundingClientRect().top <= headerH + 1){
+      var head = document.querySelector('.menu-head');
+      window.scrollTo({ top: head.getBoundingClientRect().bottom + window.scrollY - headerH + 1, behavior: 'auto' });
+    }
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ select(t, false); });
+    t.addEventListener('keydown', function(e){
+      var n = null;
+      if (e.key === 'ArrowRight') n = tabs[(i + 1) % tabs.length];
+      if (e.key === 'ArrowLeft') n = tabs[(i - 1 + tabs.length) % tabs.length];
+      if (e.key === 'Home') n = tabs[0];
+      if (e.key === 'End') n = tabs[tabs.length - 1];
+      if (n){ e.preventDefault(); select(n, true); }
+    });
+  });
+
+  // Today's hours and open status, in London time
+  try {
+    var parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
+    var get = function(type){ return (parts.find(function(p){ return p.type === type; }) || {}).value; };
+    var dayIdx = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+    var mins = parseInt(get('hour'), 10) % 24 * 60 + parseInt(get('minute'), 10);
+    var row = document.querySelector('.hours tr[data-day="' + dayIdx + '"]');
+    if (row) row.classList.add('today');
+    var opens = dayIdx === 0 ? 420 : 390, closes = 930;
+    var status = document.getElementById('status'), text = document.getElementById('status-text');
+    if (mins >= opens && mins < closes){
+      text.textContent = 'Open now, until 3:30pm';
+    } else {
+      status.classList.add('closed');
+      var nextDay = mins < opens ? dayIdx : (dayIdx + 1) % 7;
+      var when = nextDay === 0 ? '7:00am' : '6:30am';
+      text.textContent = 'Closed now. Opens ' + (mins < opens ? 'today' : 'tomorrow') + ' at ' + when;
+    }
+  } catch (err) {}
+})();
+</script>
+</body>
+</html>
